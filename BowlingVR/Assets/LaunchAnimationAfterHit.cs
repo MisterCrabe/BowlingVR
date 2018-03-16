@@ -18,6 +18,14 @@ public class LaunchAnimationAfterHit : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        stateMachine.SetState("Active");
+        if (other.tag == "Ball")
+        {
+            Debug.Log("Hit ! Reload !");
+            stateMachine.gameObject.SetActive(true);
+
+            //BAD CODE HERE
+            Destroy(other.gameObject);
+
+        }
     }
 }

@@ -17,7 +17,7 @@ namespace Assets._Project.Scripts
 
         [Header("Propulsion Params")]
         public Transform forceDirection;
-        public float forceIntensity = 10f;
+        public float forceIntensity = 5f;
 
         [Header("Debug dont't Touch")]
         public GameObject lastCreatedObject;
@@ -25,13 +25,13 @@ namespace Assets._Project.Scripts
 
         void Update()
         {
-            if (Input.GetMouseButton(0) || OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger))
+            if ( OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger) || Input.GetMouseButton(0))
             {
                 
-                forceIntensity += 0.5f;
+                forceIntensity += 0.3f;
             }
 
-            if (Input.GetMouseButtonUp(0) || OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger))
+            if ( OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger) || Input.GetMouseButtonUp(0))
             {
 
                 SpawnObject();
@@ -43,7 +43,7 @@ namespace Assets._Project.Scripts
                     rigidbodyObject.AddForce(velocity, ForceMode.Impulse);
                     Debug.Log("Pourcent : " + forceIntensity);
                 }
-                forceIntensity = 10f;
+                forceIntensity = 5f;
             }
 
             else
