@@ -25,13 +25,13 @@ namespace Assets._Project.Scripts
 
         void Update()
         {
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButton(0) || OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger))
             {
                 
                 forceIntensity += 0.5f;
             }
 
-            if (Input.GetMouseButtonUp(0))
+            if (Input.GetMouseButtonUp(0) || OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger))
             {
 
                 SpawnObject();

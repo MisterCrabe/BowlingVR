@@ -15,66 +15,66 @@ namespace Assets._Project.Scripts
 
         public static Action ScoreChanged;
 
-        public static void UpdateScore(int NbScoredQuilles)
-        {
+        //public static void UpdateScore(int NbScoredQuilles)
+        //{
 
-            switch (NbScoredQuilles)
-            {
-                case 10:
-                    CheckTempScore();
-                    tempScore = 10;
-                    break;
+        //    switch (NbScoredQuilles)
+        //    {
+        //        case 10:
+        //            CheckTempScore();
+        //            tempScore = 10;
+        //            break;
 
-                case 9:
-                    CheckTempScore();
-                    tempScore = 9;
-                    break;
+        //        case 9:
+        //            CheckTempScore();
+        //            tempScore = 9;
+        //            break;
 
-                case 8:
-                    CheckTempScore();
-                    score += NbScoredQuilles;
-                    break;
-                case 0:
-                    CheckTempScore();
-                    break;
-            }
+        //        case 8:
+        //            CheckTempScore();
+        //            score += NbScoredQuilles;
+        //            break;
+        //        case 0:
+        //            CheckTempScore();
+        //            break;
+        //    }
             
-            if (ScoreChanged != null)
-            {
-                ScoreChanged.Invoke();
-            }
-        }
+        //    if (ScoreChanged != null)
+        //    {
+        //        ScoreChanged.Invoke();
+        //    }
+        //}
 
 
 
-        public static void CheckTempScore()
-        {
-            if (tempScore != null)
-            {
-                switch (tempScore)
-                {
-                    case 10:
-                        if (true)
-                        {
+        //public static void CheckTempScore()
+        //{
+        //    if (tempScore != null)
+        //    {
+        //        switch (tempScore)
+        //        {
+        //            case 10:
+        //                if (true)
+        //                {
 
-                        }
-                        tempScore = 10;
-                        break;
+        //                }
+        //                tempScore = 10;
+        //                break;
 
-                    case 9:
-                        CheckTempScore();
-                        tempScore = 9;
-                        break;
+        //            case 9:
+        //                CheckTempScore();
+        //                tempScore = 9;
+        //                break;
 
-                    case 8:
-                        CheckTempScore();
-                        score += NbScoredQuilles;
-                        break;
-                    case 0:
-                        CheckTempScore();
-                        break;
-                }
-            }
-        }
+        //            case 8:
+        //                CheckTempScore();
+        //                score += NbScoredQuilles;
+        //                break;
+        //            case 0:
+        //                CheckTempScore();
+        //                break;
+        //        }
+        //    }
+        //}
     }
 }
