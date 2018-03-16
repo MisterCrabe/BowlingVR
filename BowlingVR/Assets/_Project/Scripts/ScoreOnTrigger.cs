@@ -12,7 +12,7 @@ public class ScoreOnTrigger : MonoBehaviour
         if (col.GetComponent<Ball>().IsScored != true)
         {
             
-            ScoreManager.UpdateScore();
+            //ScoreManager.UpdateScore();
             col.GetComponent<Ball>().IsScored = true;
         }
     }
